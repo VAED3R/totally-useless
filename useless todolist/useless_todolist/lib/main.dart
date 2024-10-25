@@ -122,7 +122,7 @@ class _TodoListScreenState extends State<TodoListScreen> {
 
   void _scheduleUnblur(TodoItem todo) {
     final now = DateTime.now();
-    const difference = Duration(seconds: 5); //testing
+    const difference = Duration(seconds: 5); // Testing
     Timer(difference, () {
       setState(() {
         todo.isUnblurred = true;
@@ -174,7 +174,24 @@ class _TodoListScreenState extends State<TodoListScreen> {
     }
   }
 
-  String _getVagueTimeDescription() {
+  String _getVagueTimeDescription(TodoItem todo) {
+    if (todo.isUnblurred) {
+      final sarcasticMessages = [
+        "Oops, you just missed this!",
+        "Well, that happened!",
+        "Guess you're not getting that reminder!",
+        "Surprise! It's too late now!",
+        "Whoops! Missed the boat on that one!",
+        "Too slow! Better luck next time!",
+        "Looks like someone wasn't paying attention!",
+        "Ah, the irony of timing!",
+        "Better luck next time!",
+        "Missed it by that much!"
+      ];
+      final randomIndex = Random().nextInt(sarcasticMessages.length);
+      return sarcasticMessages[randomIndex];
+    }
+
     final vagueMessages = [
       "will remind eventually",
       "reminder coming sooner or later",
@@ -213,7 +230,7 @@ class _TodoListScreenState extends State<TodoListScreen> {
             style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
           ),
           subtitle: Text(
-            _getVagueTimeDescription(),
+            _getVagueTimeDescription(item),
             style: const TextStyle(color: Colors.black54),
           ),
           trailing: IconButton(
