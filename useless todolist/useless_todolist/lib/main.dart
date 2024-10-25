@@ -1,125 +1,203 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
+import 'dart:math';
 
 void main() {
-  runApp(const MyApp());
+  runApp(TodoApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
+class TodoApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Useless Todo App',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: TodoListScreen(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
+class TodoListScreen extends StatefulWidget {
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  _TodoListScreenState createState() => _TodoListScreenState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+class _TodoListScreenState extends State<TodoListScreen> {
+  final List<TodoItem> _todoItems = [];
+  final TextEditingController _taskController = TextEditingController();
+  DateTime? _selectedDateTime;
+  bool _debugMode = false; // Debug mode toggle
 
-  void _incrementCounter() {
+  void _addTodoItem() {
+    if (_taskController.text.isNotEmpty && _selectedDateTime != null) {
+      final newTodo = TodoItem(_taskController.text, _selectedDateTime!, false);
+      setState(() {
+        _todoItems.add(newTodo);
+      });
+      _scheduleUnblur(newTodo);
+      _taskController.clear();
+      _selectedDateTime = null;
+    }
+  }
+
+  void _scheduleUnblur(TodoItem todo) {
+    final now = DateTime.now();
+    final difference = todo.reminderTime.difference(now).abs() + Duration(hours: 24);
+    Timer(difference, () {
+      setState(() {
+        todo.isUnblurred = true;
+      });
+    });
+  }
+
+  void _removeTodoItem(int index) {
     setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
+      _todoItems.removeAt(index);
+    });
+  }
+
+  Future<void> _selectDateTime(BuildContext context) async {
+    final DateTime? picked = await showDatePicker(
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(2020),
+      lastDate: DateTime(2100),
+    );
+    if (picked != null) {
+      final TimeOfDay? time = await showTimePicker(
+        context: context,
+        initialTime: TimeOfDay.now(),
+      );
+      if (time != null) {
+        setState(() {
+          _selectedDateTime = DateTime(picked.year, picked.month, picked.day, time.hour, time.minute);
+        });
+      }
+    }
+  }
+
+  String _getDisplayTitle(TodoItem todo) {
+    if (_debugMode || todo.isUnblurred) {
+      return todo.task;
+    } else {
+      return '*' * todo.task.length;
+    }
+  }
+
+  String _getVagueTimeDescription() {
+    final vagueMessages = [
+      "will remind eventually",
+      "reminder coming sooner or later",
+      "expect a reminder at some point",
+      "reminder will arrive... eventually",
+      "you'll be reminded in due time",
+      "reminder incoming... sometime",
+      "rest assured, a reminder is on its way",
+      "a reminder will happen... eventually",
+      "reminder set for... whenever",
+      "reminder planned for a vague time",
+    ];
+    final randomIndex = Random().nextInt(vagueMessages.length);
+    return vagueMessages[randomIndex];
+  }
+
+  void _toggleDebugMode() {
+    setState(() {
+      _debugMode = !_debugMode;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: Text('Useless Todo App'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.bug_report),
+            onPressed: _toggleDebugMode,
+            tooltip: _debugMode ? 'Disable Debug Mode' : 'Enable Debug Mode',
+          ),
+        ],
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              controller: _taskController,
+              decoration: InputDecoration(labelText: 'Enter task'),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+          ),
+          ElevatedButton(
+            onPressed: () => _selectDateTime(context),
+            child: Text(_selectedDateTime == null
+                ? 'Select reminder time'
+                : 'Selected: ${_selectedDateTime!.toLocal()}'),
+          ),
+          ElevatedButton(
+            onPressed: _addTodoItem,
+            child: Text('Add Task'),
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemCount: _todoItems.length,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
+                  child: Dismissible(
+                    key: ValueKey(_todoItems[index]),
+                    direction: DismissDirection.endToStart,
+                    onDismissed: (_) => _removeTodoItem(index),
+                    background: Container(
+                      alignment: Alignment.centerRight,
+                      color: Colors.redAccent,
+                      padding: EdgeInsets.symmetric(horizontal: 20.0),
+                      child: Icon(Icons.delete, color: Colors.white),
+                    ),
+                    child: AnimatedScale(
+                      scale: 1.0,
+                      duration: Duration(milliseconds: 500),
+                      curve: Curves.easeInOut,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.lightBlueAccent.shade100,
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        child: ListTile(
+                          contentPadding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
+                          title: Text(
+                            _getDisplayTitle(_todoItems[index]),
+                            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
+                          ),
+                          subtitle: Text(
+                            _getVagueTimeDescription(),
+                            style: TextStyle(color: Colors.black54),
+                          ),
+                          trailing: IconButton(
+                            icon: Icon(Icons.delete, color: Colors.red),
+                            onPressed: () => _removeTodoItem(index),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                );
+              },
             ),
-          ],
-        ),
+          ),
+        ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+}
+
+class TodoItem {
+  final String task;
+  final DateTime reminderTime;
+  bool isUnblurred; // Track whether the task is unblurred or still hidden
+
+  TodoItem(this.task, this.reminderTime, this.isUnblurred);
 }
