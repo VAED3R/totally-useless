@@ -248,11 +248,11 @@ class _TodoListScreenState extends State<TodoListScreen> {
       appBar: AppBar(
         title: const Text('BLIND LIST'),
         actions: [
-          IconButton(
-            icon: const Icon(Icons.bug_report),
-            onPressed: _toggleDebugMode,
-            tooltip: _debugMode ? 'Disable Debug Mode' : 'Enable Debug Mode',
-          ),
+          // IconButton(
+          //   icon: const Icon(Icons.bug_report),
+          //   onPressed: _toggleDebugMode,
+          //   tooltip: _debugMode ? 'Disable Debug Mode' : 'Enable Debug Mode',
+          // ),
         ],
       ),
       body: Stack(
