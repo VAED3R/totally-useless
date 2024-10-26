@@ -19,12 +19,6 @@ BlindList: It’s like a to-do list, but you’re not allowed to know what’s o
 ### The Problem (that doesn't exist)
 BlindList solves the devastating problem of knowing what you have to do. Why be burdened by the heavy knowledge of your own tasks? With BlindList, you can stumble into productivity without the pesky pressure of planning—because who doesn’t want a little mystery in their Monday?
 
-
-
-
-
-
-
 ### The Solution (that nobody asked for)
 BlindList solves it by turning your to-do list into a covert operation! You jot down your tasks, and we lock them away like classified files. The only way to unlock them? Complete random activities until—bam!—one of them matches. It’s like productivity karaoke: you don’t know the words, but you’re singing anyway. By the time you’re done, you’ve been productive without even knowing what you set out to do!!
 
@@ -38,10 +32,14 @@ For Software:
 ### Implementation
 For Software:
 # Installation
-[commands]
+1.**Download the APK File from the releases page**
+2. **Install the APK on Your Android Device**
 
 # Run
-[commands]
+After installing the APK, you can launch the app:
+Open Manually on the Device
+1. Find the app icon on your device's home screen or app drawer.
+2. Tap on it to open the app.
 
 ### Project Documentation
 For Software:
@@ -66,32 +64,10 @@ For Software:
 ![Workflow](Add your workflow/architecture diagram here)
 *Add caption explaining your workflow*
 
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
 ### Project Demo
 # Video
-[Watch the demo video](demo-assets/WhatsApp Video 2024-10-26 at 7.54.16 AM.mp4)
-*Entering into the homepage.Setting the level of Overthinking.Start Ovethinking is pressed then redirected to input.Entering the prompt and pressing Analyse Decision.Output is generated*
-
-# Additional Demos
-[Add any extra demo materials/links]
+[Watch the demo video](demo-assets/demo-video.mp4)
+*Adding a reminder by using the add task button* after the task has been added after 5 seconds the task is revealed. The actual app is supposed to show it after 24 hours in which the date is set but for to easy understanding what the app is supposed to achieve its set to just show what it does after the 24 hours
 
 ## Team Contributions
 - Jishnu: Implementation
