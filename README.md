@@ -88,9 +88,9 @@ For Hardware:
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Jishnu]: [Implementation]
-- [Fathil P M: [Animation]
-- [Akshay Kumar M S]: [Multiple Descriptions]
+- Jishnu: Implementation
+- Fathil P M: Animation
+- Akshay Kumar M S: Multiple Descriptions
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
