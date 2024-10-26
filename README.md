@@ -87,8 +87,8 @@ For Hardware:
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+[Watch the demo video](demo-assets/WhatsApp Video 2024-10-26 at 7.54.16 AM.mp4)
+*Entering into the homepage.Setting the level of Overthinking.Start Ovethinking is pressed then redirected to input.Entering the prompt and pressing Analyse Decision.Output is generated*
 
 # Additional Demos
 [Add any extra demo materials/links]
