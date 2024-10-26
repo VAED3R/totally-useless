@@ -47,15 +47,18 @@ For Software:
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot1](<img width="1280" alt="readme-banner" src="vids/imgs/IMG-20241026-WA0014.jpg">)
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot2](<img width="1280" alt="readme-banner" src="vids/imgs/IMG-20241026-WA0015.jpg">)
 
+
+![Screenshot3](<img width="1280" alt="readme-banner" src="vids/imgs/IMG-20241026-WA0016.jpg">)
+
+
+![Screenshot4](<img width="1280" alt="readme-banner" src="vids/imgs/IMG-20241026-WA0017.jpg>)
+
+![Screenshot5](<img width="1280" alt="readme-banner" src="vids/imgs/IMG-20241026-WA0018.jpg">)
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
 *Add caption explaining your workflow*
