@@ -61,8 +61,7 @@ For Software:
 <img width="500" alt="srnsht1" src="demo-assets/IMG-20241026-WA0015.jpg">
 
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+<img width="500" alt="srnsht1" src="demo-assets/flowchart.png">
 
 ### Project Demo
 # Video
