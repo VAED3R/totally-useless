@@ -47,18 +47,20 @@ For Software:
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](<img width="1280" alt="readme-banner" src="demo-assets/IMG-20241026-WA0014.jpg">)
+![Screenshot1]
+<img width="500" alt="srnsht1" src="demo-assets/IMG-20241026-WA0014.jpg">
 
+![Screenshot2]
+<img width="500" alt="srnsht1" src="demo-assets/IMG-20241026-WA0015.jpg">
 
-![Screenshot2](<img width="1280" alt="readme-banner" src="demo-assets/IMG-20241026-WA0015.jpg">)
+![Screenshot3]
+<img width="500" alt="srnsht1" src="demo-assets/IMG-20241026-WA0016.jpg">
 
+![Screenshot4]
+<img width="500" alt="srnsht1" src="demo-assets/IMG-20241026-WA0017.jpg">
 
-![Screenshot3](<img width="1280" alt="readme-banner" src="demo-assets/IMG-20241026-WA0016.jpg">)
-
-
-![Screenshot4](<img width="1280" alt="readme-banner" src="demo-assets/IMG-20241026-WA0017.jpg>)
-
-![Screenshot5](<img width="1280" alt="readme-banner" src="demo-assets/IMG-20241026-WA0018.jpg">)
+![Screenshot5]
+<img width="500" alt="srnsht1" src="demo-assets/IMG-20241026-WA0018.jpg">
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
 *Add caption explaining your workflow*
