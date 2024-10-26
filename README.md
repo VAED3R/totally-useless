@@ -45,20 +45,20 @@ Open Manually on the Device
 For Software:
 
 # Screenshots
-![Screenshot1]
 <img width="500" alt="srnsht1" src="demo-assets/IMG-20241026-WA0014.jpg">
+*Home page of the app to add task*
 
-![Screenshot2]
 <img width="500" alt="srnsht1" src="demo-assets/IMG-20241026-WA0018.jpg">
+*Setting the date*
 
-![Screenshot3]
 <img width="500" alt="srnsht1" src="demo-assets/IMG-20241026-WA0017.jpg">
+*Setting Time*
 
-![Screenshot4]
 <img width="500" alt="srnsht1" src="demo-assets/IMG-20241026-WA0016.jpg">
+*Setting task name*
 
-![Screenshot5]
 <img width="500" alt="srnsht1" src="demo-assets/IMG-20241026-WA0015.jpg">
+*Task added*
 
 # Diagrams
 <img width="500" alt="srnsht1" src="demo-assets/flowchart.png">
