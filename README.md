@@ -31,15 +31,9 @@
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
-
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+- [Languages used : Dart]
+- [Frameworks used : Flutter]
+- [Tools used : ]
 
 ### Implementation
 For Software:
@@ -94,9 +88,9 @@ For Hardware:
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- [Jishnu]: [Implementation]
+- [Fathil P M: [Animation]
+- [Akshay Kumar M S]: [Multiple Descriptions]
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
