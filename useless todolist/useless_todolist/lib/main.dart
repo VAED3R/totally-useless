@@ -247,7 +247,7 @@ class _TodoListScreenState extends State<TodoListScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('BLIND LIST'),
-        actions: [
+        actions: const [
           // IconButton(
           //   icon: const Icon(Icons.bug_report),
           //   onPressed: _toggleDebugMode,
