@@ -220,7 +220,7 @@ class _TodoListScreenState extends State<TodoListScreen> {
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
         decoration: BoxDecoration(
-          color: Colors.lightBlueAccent.shade100,
+          color: const Color.fromARGB(255, 243, 228, 255),
           borderRadius: BorderRadius.circular(15.0),
         ),
         child: ListTile(
@@ -234,7 +234,7 @@ class _TodoListScreenState extends State<TodoListScreen> {
             style: const TextStyle(color: Colors.black54),
           ),
           trailing: IconButton(
-            icon: const Icon(Icons.delete, color: Colors.red),
+            icon: const Icon(Icons.delete, color: Color.fromARGB(255, 0, 0, 0)),
             onPressed: () => _removeTodoItem(_todoItems.indexOf(item)),
           ),
         ),
@@ -263,8 +263,12 @@ class _TodoListScreenState extends State<TodoListScreen> {
                   children: [
                     ElevatedButton(
                       onPressed: _selectDateTimeAndAddTask,
-                      child: const Text('Add Reminder'),
+                      child: const Text(
+                        'Add Reminder',
+                        style: TextStyle(color: Colors.black), // Set text color to black
+                      ),
                     ),
+
                     Expanded(
                       child: AnimatedList(
                         key: _listKey,
