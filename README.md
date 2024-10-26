@@ -44,7 +44,7 @@ Open Manually on the Device
 ### Project Documentation
 For Software:
 
-# Screenshots (Add at least 3)
+# Screenshots
 ![Screenshot1]
 <img width="500" alt="srnsht1" src="demo-assets/IMG-20241026-WA0014.jpg">
 
