@@ -1,23 +1,23 @@
 # totally-useless initial commit
 <img width="1280" alt="readme-banner" src="https://github.com/user-attachments/assets/35332e92-44cb-425b-9dff-27bcf1023c6c">
 
-# [BlindList] 🎯
+# BlindList 🎯
 
 
 ## Basic Details
-### Team Name: [Void Main]
+### Team Name: Void Main
 
 
 ### Team Members
-- Team Lead: [Jishnu Sursh] - [SCMS]
-- Member 2: [Fathil P M] - [SCMS]
-- Member 3: [Akshay Kumar M S] - [SCMS]
+- Team Lead: Jishnu Sursh - SCMS
+- Member 2: Fathil P M - SCMS
+- Member 3: Akshay Kumar M S - SCMS
 
 ### Project Description
-[BlindList: It’s like a to-do list, but you’re not allowed to know what’s on it. Finish random tasks, hope they’re the right ones, and maybe you'll accidentally get stuff done! ]
+BlindList: It’s like a to-do list, but you’re not allowed to know what’s on it. Finish random tasks, hope they’re the right ones, and maybe you'll accidentally get stuff done! 
 
 ### The Problem (that doesn't exist)
-[BlindList solves the devastating problem of knowing what you have to do. Why be burdened by the heavy knowledge of your own tasks? With BlindList, you can stumble into productivity without the pesky pressure of planning—because who doesn’t want a little mystery in their Monday?]
+BlindList solves the devastating problem of knowing what you have to do. Why be burdened by the heavy knowledge of your own tasks? With BlindList, you can stumble into productivity without the pesky pressure of planning—because who doesn’t want a little mystery in their Monday?
 
 
 
@@ -26,14 +26,14 @@
 
 
 ### The Solution (that nobody asked for)
-[BlindList solves it by turning your to-do list into a covert operation! You jot down your tasks, and we lock them away like classified files. The only way to unlock them? Complete random activities until—bam!—one of them matches. It’s like productivity karaoke: you don’t know the words, but you’re singing anyway. By the time you’re done, you’ve been productive without even knowing what you set out to do!!]
+BlindList solves it by turning your to-do list into a covert operation! You jot down your tasks, and we lock them away like classified files. The only way to unlock them? Complete random activities until—bam!—one of them matches. It’s like productivity karaoke: you don’t know the words, but you’re singing anyway. By the time you’re done, you’ve been productive without even knowing what you set out to do!!
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used : Dart]
-- [Frameworks used : Flutter]
-- [Tools used : ]
+- Languages used : Dart
+- Frameworks used : Flutter
+- Tools used : VS Code, Android Studio
 
 ### Implementation
 For Software:
