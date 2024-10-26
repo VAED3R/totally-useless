@@ -9,7 +9,7 @@
 
 
 ### Team Members
-- Team Lead: Jishnu Sursh - SCMS
+- Team Lead: Jishnu Suresh - SCMS
 - Member 2: Fathil P M - SCMS
 - Member 3: Akshay Kumar M S - SCMS
 
