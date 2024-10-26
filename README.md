@@ -47,18 +47,21 @@ For Software:
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](<img width="1280" alt="readme-banner" src="demo assets/IMG-20241026-WA0014.jpg">)
+![Screenshot1]
+<img width="500" alt="srnsht1" src="demo-assets/IMG-20241026-WA0014.jpg">
 
+![Screenshot2]
+<img width="500" alt="srnsht1" src="demo-assets/IMG-20241026-WA0018.jpg">
 
-![Screenshot2](<img width="1280" alt="readme-banner" src="demo assets/IMG-20241026-WA0015.jpg">)
+![Screenshot3]
+<img width="500" alt="srnsht1" src="demo-assets/IMG-20241026-WA0017.jpg">
 
+![Screenshot4]
+<img width="500" alt="srnsht1" src="demo-assets/IMG-20241026-WA0016.jpg">
 
-![Screenshot3](<img width="1280" alt="readme-banner" src="demo assets/IMG-20241026-WA0016.jpg">)
+![Screenshot5]
+<img width="500" alt="srnsht1" src="demo-assets/IMG-20241026-WA0015.jpg">
 
-
-![Screenshot4](<img width="1280" alt="readme-banner" src="demo assets/IMG-20241026-WA0017.jpg>)
-
-![Screenshot5](<img width="1280" alt="readme-banner" src="demo assets/IMG-20241026-WA0018.jpg">)
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
 *Add caption explaining your workflow*
@@ -84,8 +87,8 @@ For Hardware:
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+[Watch the demo video](demo-assets/WhatsApp Video 2024-10-26 at 7.54.16 AM.mp4)
+*Entering into the homepage.Setting the level of Overthinking.Start Ovethinking is pressed then redirected to input.Entering the prompt and pressing Analyse Decision.Output is generated*
 
 # Additional Demos
 [Add any extra demo materials/links]
